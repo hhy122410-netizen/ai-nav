@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI模型合集 2026 - 闭源大模型与开源模型参数对比 | AI导航</title>
+<meta name="description" content="2026年AI大模型合集：GPT、Claude、Gemini、DeepSeek、文心一言等闭源模型，以及Llama、Qwen、Mistral等开源模型的参数、上下文、价格全对比。">
+<meta name="keywords" content="AI模型,大模型,GPT,Claude,Gemini,DeepSeek,Llama,Qwen,开源模型">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <div class="logo">AI<span>导航</span></div>
+    <nav class="nav-links">
+      <a href="index.html">首页</a>
+      <a href="tools.html">AI工具</a>
+      <a href="models.html" class="active">AI模型</a>
+      <a href="prompts.html">提示词库</a>
+      <a href="news.html">AI资讯</a>
+      <a href="learn.html">AI教程</a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+  <div class="hero" style="padding:40px 0 20px;">
+    <h1>AI 模型合集</h1>
+    <p>主流大模型参数、上下文、价格全面对比</p>
+  </div>
+
+  <h2 class="section-title">闭源大模型（官方 API / 应用）</h2>
+  <table>
+    <tr><th>模型</th><th>出品方</th><th>参数规模</th><th>上下文</th><th>多模态</th><th>价格</th><th>核心优势</th></tr>
+    <tr><td>GPT-5</td><td>OpenAI</td><td>未公开</td><td>200K+</td><td>✅</td><td>付费</td><td>综合能力最强</td></tr>
+    <tr><td>Claude 4</td><td>Anthropic</td><td>未公开</td><td>200K+</td><td>✅</td><td>付费</td><td>写作/编程突出</td></tr>
+    <tr><td>Gemini 2.5</td><td>Google</td><td>未公开</td><td>1M</td><td>✅</td><td>免费/付费</td><td>超长上下文</td></tr>
+    <tr><td>DeepSeek-R1</td><td>深度求索</td><td>671B</td><td>64K</td><td>❌</td><td>免费/低价API</td><td>推理强、性价比高</td></tr>
+    <tr><td>文心一言 4.5</td><td>百度</td><td>未公开</td><td>128K</td><td>✅</td><td>免费</td><td>中文理解好</td></tr>
+    <tr><td>通义千问</td><td>阿里云</td><td>未公开</td><td>128K</td><td>✅</td><td>免费</td><td>功能全面</td></tr>
+    <tr><td>豆包大模型</td><td>字节跳动</td><td>未公开</td><td>128K</td><td>✅</td><td>免费</td><td>中文对话流畅</td></tr>
+  </table>
+
+  <h2 class="section-title">开源大模型（可本地部署）</h2>
+  <table>
+    <tr><th>模型</th><th>出品方</th><th>参数规模</th><th>显存需求(Q4)</th><th>许可证</th><th>中文能力</th></tr>
+    <tr><td>Llama 4</td><td>Meta</td><td>8B - 400B</td><td>5GB - 250GB</td><td>开源</td><td>中等</td></tr>
+    <tr><td>Qwen 2.5 / 3</td><td>阿里</td><td>0.5B - 72B</td><td>1GB - 40GB</td><td>Apache 2.0</td><td>强</td></tr>
+    <tr><td>DeepSeek-R1</td><td>深度求索</td><td>1.5B - 671B</td><td>1GB - 350GB</td><td>MIT</td><td>强</td></tr>
+    <tr><td>Mistral</td><td>Mistral AI</td><td>7B - 123B</td><td>5GB - 70GB</td><td>Apache 2.0</td><td>中等</td></tr>
+    <tr><td>Gemma 3</td><td>Google</td><td>1B - 27B</td><td>1GB - 15GB</td><td>开源</td><td>中等</td></tr>
+    <tr><td>GLM-4</td><td>智谱 AI</td><td>9B - 340B</td><td>6GB - 200GB</td><td>开源</td><td>强</td></tr>
+  </table>
+
+  <h2 class="section-title">本地部署显存对照表</h2>
+  <table>
+    <tr><th>显卡显存</th><th>推荐模型</th><th>效果</th></tr>
+    <tr><td>4GB</td><td>Qwen2.5:3b / 7b-q4_0</td><td>入门够用</td></tr>
+    <tr><td>6GB</td><td>Qwen2.5:7b</td><td>中文流畅</td></tr>
+    <tr><td>8GB</td><td>Qwen2.5:14b / DeepSeek-R1:14b</td><td>⭐ 性价比之王</td></tr>
+    <tr><td>12GB</td><td>Qwen2.5:14b / 32b-q4</td><td>接近高级云端</td></tr>
+    <tr><td>16GB+</td><td>Qwen2.5:32b / 72b</td><td>接近 GPT-4 级</td></tr>
+  </table>
+
+  <h2 class="section-title">如何选择模型</h2>
+  <table>
+    <tr><th>使用场景</th><th>推荐模型</th><th>理由</th></tr>
+    <tr><td>日常对话 / 写作</td><td>GPT-5 / Claude / DeepSeek</td><td>综合能力与性价比</td></tr>
+    <tr><td>编程开发</td><td>Claude Code / Cursor + Claude</td><td>代码能力业界领先</td></tr>
+    <tr><td>中文内容创作</td><td>通义千问 / 豆包 / Kimi</td><td>中文语义理解好</td></tr>
+    <tr><td>本地部署（隐私优先）</td><td>Qwen2.5:14b / DeepSeek-R1:14b</td><td>开源免费、数据私有</td></tr>
+    <tr><td>预算有限</td><td>DeepSeek（免费）</td><td>免费且能力强</td></tr>
+    <tr><td>长文档处理</td><td>Kimi / Gemini</td><td>超长上下文</td></tr>
+  </table>
+
+  <div class="article" style="margin-top:20px;">
+    <h3>💡 想自己电脑跑大模型？</h3>
+    <p>开源模型可以免费下载到本地运行，数据私有、离线可用。8G 显存就能跑通 14B 模型，详见 <a href="learn.html" style="color:var(--accent2);">本地部署教程</a>。</p>
+  </div>
+</main>
+<footer>
+  <div class="container">
+    <p>AI导航 · 精选全球 AI 工具与模型 | <a href="about.html">关于我们</a> · <a href="privacy.html">隐私政策</a></p>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
