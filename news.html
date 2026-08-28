@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI资讯 - 人工智能最新动态与行业趋势（54篇） | AI导航</title>
+<title>AI资讯 - 人工智能最新动态与行业趋势（56篇） | AI导航</title>
 <meta name="description" content="最新AI资讯合集：大模型发布、AI工具更新、行业动态、AI监管政策、AI应用落地，紧跟人工智能前沿趋势。">
 <meta name="keywords" content="AI资讯,人工智能新闻,大模型,AI行业动态,AI工具,AI应用">
 <link rel="stylesheet" href="css/style.css">
@@ -34,6 +34,16 @@
   <div class="hero" style="padding:40px 0 20px;">
     <h1>AI 资讯</h1>
     <p>人工智能最新动态与行业趋势，持续更新</p>
+  </div>
+  <div class="article">
+    <span class="date">2026年8月</span>
+    <h3>向量数据库：大模型「长期记忆」与语义检索的底座</h3>
+    <p>大模型虽然「上知天文下知地理」，但本身并不具备持久记忆——每次对话结束后，学到的内容并不会被自动保存。要让 AI 在跨会话场景中「记住」海量知识、并在需要时精准召回，向量数据库（Vector Database）成为不可或缺的基础设施。它的原理是：先用嵌入模型把文本、图片、音频等内容转换成一组高维向量，让语义相近的内容在向量空间中彼此靠近；查询时同样把问题转成向量，再通过「相似度检索」找到最相关的内容。与只匹配关键词的传统检索不同，向量检索能理解「同义不同词」，例如搜索「怎样让电脑跑得快」也能命中「如何提升机器性能」。目前 FAISS、Milvus、pgvector、Chroma 等开源方案，以及各大云厂商的托管服务都已成熟，配合「向量 + 关键词」的混合检索与重排序（Rerank）技术，检索精度进一步提升。可以说，向量数据库正与 RAG、智能体记忆等能力一起，成为大模型从「聊天机器人」走向「企业知识助手」的关键底座。</p>
+  </div>
+  <div class="article">
+    <span class="date">2026年8月</span>
+    <h3>大模型推理优化引擎：让 AI 服务「又快又省」</h3>
+    <p>大模型训练完成后，真正的考验在「上线服务」——面对成百上千的并发请求，如何做到延迟低、吞吐高、成本省？大模型推理优化引擎（Inference Engine）正是为这一目标而生。以 vLLM、TensorRT-LLM、SGLang、llama.cpp 等为代表的推理框架，通过一系列工程技术大幅提升部署效率：PagedAttention 等技术把显存中的 KV 缓存像内存分页一样精细管理，显著降低显存浪费；连续批处理（Continuous Batching）让不同长度的请求动态拼批，避免「短请求等长请求」造成的算力空转；再配合量化压缩、投机采样（Speculative Decoding）等技巧，同一块显卡能服务的请求量与响应速度成倍提升。对开发者而言，选对推理引擎往往比堆更多显卡更划算，也能让 AI 应用在流量高峰时依然稳定流畅。可以预见，随着大模型应用走向规模化，推理优化将从「可选优化」变成「标配工程」，成为决定 AI 产品体验与成本的关键一环。</p>
   </div>
   <div class="article">
     <span class="date">2026年8月</span>
