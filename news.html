@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI资讯 - 人工智能最新动态与行业趋势（82篇） | AI导航</title>
+<title>AI资讯 - 人工智能最新动态与行业趋势（84篇） | AI导航</title>
 <meta name="description" content="最新AI资讯合集：大模型发布、AI工具更新、行业动态、AI监管政策、AI应用落地，紧跟人工智能前沿趋势。">
 <meta name="keywords" content="AI资讯,人工智能新闻,大模型,AI行业动态,AI工具,AI应用">
 <link rel="stylesheet" href="css/style.css">
@@ -34,6 +34,16 @@
   <div class="hero" style="padding:40px 0 20px;">
     <h1>AI 资讯</h1>
     <p>人工智能最新动态与行业趋势，持续更新</p>
+  </div>
+  <div class="article">
+    <span class="date">2026年9月</span>
+    <h3>Token：大模型理解文本的「最小单位」</h3>
+    <p>大模型处理文本时，第一步并不是直接「读字」，而是先把文字切成一个个被称为 Token 的最小单元——这个「分词」（Tokenization）过程，决定了模型如何理解语言，也直接关系到计费与效果。以英文为例，一个单词可能被拆成一个或多个 Token，如 "unbelievable" 可能拆成 "un"、"believ"、"able" 几段；中文则通常按字或词切分，常见的 BPE（字节对编码）等算法会在「词典大小」与「切分粒度」之间权衡。理解 Token 之所以重要，原因有三：其一，模型的一切输入输出都以 Token 计，Token 数量直接决定 API 成本与上下文占用；其二，同一句话切分方式不同，模型的理解效果也会有所差异；其三，中文等语言的切分效率往往低于英文，表达相同内容可能消耗更多 Token。对开发者而言，看懂 Token 是入门大模型工程的第一课——它有助于估算成本、优化提示词、控制上下文长度，也是理解「上下文窗口」「计费规则」等概念的基础。</p>
+  </div>
+  <div class="article">
+    <span class="date">2026年9月</span>
+    <h3>投机采样（Speculative Decoding）：让大模型推理更快而不失精度</h3>
+    <p>大模型「逐字生成」的特性，让响应速度成为体验瓶颈，投机采样（Speculative Decoding）正是近年来颇受关注的加速技术。它的思路十分巧妙：先用一个轻量的小模型「草拟」出若干后续 token，再由大模型对这些草稿做一次性「批改验证」——通过的部分直接采纳，不通过的部分才重新计算。由于一次性验证多个 token 的代价远低于逐字生成，最终在输出质量几乎不变的前提下，推理速度可获得数倍提升。这一技术的价值在于「快而不损」：它不改变模型权重、不牺牲精度，只优化生成流程，因此被越来越多的推理框架与云服务采用，尤其适合长文本输出、批量生成等场景。对开发者与小团队而言，投机采样常与量化、KV 缓存、连续批处理等手段叠加使用，让「用有限算力服务更多用户」成为现实，是大模型推理优化工具箱里的又一件利器。</p>
   </div>
   <div class="article">
     <span class="date">2026年9月</span>
