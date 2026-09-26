@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI资讯 - 人工智能最新动态与行业趋势（84篇） | AI导航</title>
+<title>AI资讯 - 人工智能最新动态与行业趋势（86篇） | AI导航</title>
 <meta name="description" content="最新AI资讯合集：大模型发布、AI工具更新、行业动态、AI监管政策、AI应用落地，紧跟人工智能前沿趋势。">
 <meta name="keywords" content="AI资讯,人工智能新闻,大模型,AI行业动态,AI工具,AI应用">
 <link rel="stylesheet" href="css/style.css">
@@ -34,6 +34,16 @@
   <div class="hero" style="padding:40px 0 20px;">
     <h1>AI 资讯</h1>
     <p>人工智能最新动态与行业趋势，持续更新</p>
+  </div>
+  <div class="article">
+    <span class="date">2026年9月</span>
+    <h3>KV Cache：大模型推理时「记住上文」的显存引擎</h3>
+    <p>大模型每生成一个新 token，都要重新「回顾」前面已生成的内容；如果每次都从头计算，推理会慢到无法接受。KV Cache（键值缓存）正是解决这一问题的关键机制：Transformer 的注意力层在计算时，会把每个 token 对应的 Key 与 Value 向量缓存下来，后续步骤直接复用，从而把逐字生成从「重复计算」变成「增量计算」，显著加速推理。然而，KV Cache 也带来新的挑战——它随上下文长度线性增长，在长文本与高并发场景下会迅速吃满显存，成为吞吐瓶颈。为此业界发展出多种优化手段：PagedAttention 把 KV 缓存按「页」精细管理、减少碎片浪费；GQA/MQA 通过分组共享注意力头，成倍压缩缓存体积；此外还有 KV 量化、滑动窗口、缓存淘汰等策略，在「多存一点」与「省一点」之间权衡。可以说，管好 KV Cache，是让大模型推理又快又省的核心工程课题。</p>
+  </div>
+  <div class="article">
+    <span class="date">2026年9月</span>
+    <h3>RAG 分块策略：检索质量从「切好文档」开始</h3>
+    <p>RAG（检索增强生成）的效果，很大程度上取决于第一步——如何把文档「切」成适合检索的片段，也就是分块（Chunking）。切得太碎，单个片段信息不足，模型「只见树木不见森林」；切得太大，语义被稀释，检索出的片段又夹杂大量无关内容，既浪费上下文又拉低答案质量。因此，分块策略成为 RAG 质量的地基。常见做法包括：按固定长度切分并保留一定的重叠（overlap），避免关键信息被切断；按段落、标题等结构切分，保持语义完整；以及更精细的「父文档 + 子文档」两级检索——先用小片段精准命中，再召回其所属的大段落补足上下文。选择合适的分块大小与方式，需要结合文档类型、嵌入模型与业务场景反复实验，并配合重排序等后处理。可以说，把文档「切好」，往往比换更大的模型更能立竿见影地提升 RAG 系统的回答质量。</p>
   </div>
   <div class="article">
     <span class="date">2026年9月</span>
